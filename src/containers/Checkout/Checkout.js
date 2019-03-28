@@ -6,16 +6,12 @@ import ContactData from './ContactData/ContactData';
 
 class Checkout extends Component {
 
-    componentWillMount () {
-        // this.props.onInitPurchase();
+    checkoutCancelledHandler = () => {
+        this.props.history.goBack();
     }
 
     checkoutContinuedHandler = () => {
         this.props.history.replace('/checkout/contact-data');
-    }
-
-    checkoutCancelledHandler = () => {
-        this.props.history.goBack();
     }
 
     render() {
@@ -35,7 +31,7 @@ class Checkout extends Component {
                 </div>
             );
         }
-        return summary
+        return summary;
     }
 }
 
@@ -44,6 +40,6 @@ const mapStateToProps = (state) => {
         ings: state.rootBurgerBuilder.ingredients,
         purchased: state.rootOrder.purchased
     }
-}
+};
 
 export default connect(mapStateToProps)(Checkout);

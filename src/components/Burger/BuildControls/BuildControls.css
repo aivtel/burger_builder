@@ -1,6 +1,12 @@
 .BuildControls {
+    border-top: 2px solid #703B09;
     width: 100%;
-    background-color: #CF8F2E;
+    background: linear-gradient(to right, #F1DC84, #CF8F2E);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#F1DC84, endColorstr=#CF8F2E)"; /* IE 8-9 */
+    background: -webkit-linear-gradient(left, #F1DC84, #CF8F2E); /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+    background: -moz-linear-gradient(left, #F1DC84, #CF8F2E); /* Firefox 3.6-15 */
+    background: -o-linear-gradient(left, #F1DC84, #CF8F2E); /* Opera 11.1-12 */
+    
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -12,13 +18,14 @@
 
 .OrderButton {
     background-color: #DAD735;
+    margin-top: 8px;
     outline: none;
     cursor: pointer;
     border: 1px solid #966909;
     color: #966909;
     font-family: inherit;
-    font-size: 1.2em;
-    padding: 15px 30px;
+    font-size: 1em;
+    padding: 10px 20px;
     box-shadow: 2px 2px 2px #966909;
 }
 
@@ -37,6 +44,10 @@
 
 .OrderButton:not(:disabled) {
     animation: enable 0.3s linear;
+}
+
+.Price {
+    color: white;
 }
 
 @keyframes enable {

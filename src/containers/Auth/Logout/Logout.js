@@ -7,13 +7,11 @@ class Logout extends Component {
 
     componentDidMount () {
         // this.props.onLogout(this.props.history.push(''));
-        this.props.onLogout(this.props.history.push(''));
+        this.props.onLogout();
     }
 
     render () {
-        return (
-            <Redirect to="/" />
-        );
+        return <Redirect to="/" />;        
     }
 }
 

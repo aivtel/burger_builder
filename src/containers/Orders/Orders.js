@@ -38,8 +38,8 @@ const mapStateToProps = (state) => {
         loading: state.rootOrder.loading,
         token: state.rootAuth.token,
         userId: state.rootAuth.userId
-    }
-}
+    };
+};
 
 const mapDispatchToProps = (dispatch) => {
     return {
